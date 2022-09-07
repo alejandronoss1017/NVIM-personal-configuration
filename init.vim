@@ -1,1 +1,8 @@
-
+:set number  "Muestra los numeros de linea"
+:set autoindent "Auto-indentacion de las nuevas lineas"
+:set mouse=a  "Soporte del mouse en el editor"
+:set encoding=utf-8 "Codificacion de caracteres"
+:set shiftwidth=4 " "
+:set smarttab    " "
+:set tabstop=4 "Identacion del TAB definida a 4 espacios"
+:set softtabstop=4 " "
