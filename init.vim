@@ -6,7 +6,8 @@
 :set smarttab    " "
 :set tabstop=4 "Identacion del TAB definida a 4 espacios"
 :set softtabstop=4 " "
-:set guifont=Hack_Nerd_Font:h16
+:set guifont=Hack_Nerd_Font:h12
+:syntax on
 
 "Plugins para nvim"
 call plug#begin()
@@ -15,6 +16,7 @@ Plug 'https://github.com/vim-airline/vim-airline' "Barra de status
 Plug 'https://github.com/vim-airline/vim-airline-themes' "Temas de la barra de status
 Plug 'https://github.com/preservim/nerdtree' "NerdTree Arbol para ficheros
 Plug 'https://github.com/ryanoasis/vim-devicons' "Iconos de archivos
+Plug 'neoclide/coc.nvim', {'branch': 'release'}  "Conquer Of Completition
 
 call plug#end()
 
@@ -45,3 +47,7 @@ nnoremap <C-n> :NERDTree<CR>
 
 "CTRL-T"
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+"Configuracion de CoC (C/C++, Python y Java)
+
+inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
