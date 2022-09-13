@@ -50,15 +50,6 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 "Configuracion de CoC (C/C++, Python y Java)
 
-
-"Avanzar con Tab y devolverse con S-Tab en las sugerencias
-
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
 "Confirmar la seleccion con enter
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
